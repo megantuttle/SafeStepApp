@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "/home/megan/AndroidStudioProjects/Framework-App-master/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/akshay.jpg",
+        "source": "/home/megan/AndroidStudioProjects/Framework-App-master/app/src/main/res/drawable-mdpi/akshay.jpg"
+    },
+    {
+        "merged": "/home/megan/AndroidStudioProjects/Framework-App-master/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/buttonstyle.xml",
+        "source": "/home/megan/AndroidStudioProjects/Framework-App-master/app/src/main/res/drawable-mdpi/buttonstyle.xml"
+    },
+    {
+        "merged": "/home/megan/AndroidStudioProjects/Framework-App-master/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/bg_lay.xml",
+        "source": "/home/megan/AndroidStudioProjects/Framework-App-master/app/src/main/res/drawable-mdpi/bg_lay.xml"
+    },
+    {
+        "merged": "/home/megan/AndroidStudioProjects/Framework-App-master/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/kapil.jpg",
+        "source": "/home/megan/AndroidStudioProjects/Framework-App-master/app/src/main/res/drawable-mdpi/kapil.jpg"
+    },
+    {
+        "merged": "/home/megan/AndroidStudioProjects/Framework-App-master/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_launcher.png",
+        "source": "/home/megan/AndroidStudioProjects/Framework-App-master/app/src/main/res/drawable-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/megan/AndroidStudioProjects/Framework-App-master/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/help_lay_style.xml",
+        "source": "/home/megan/AndroidStudioProjects/Framework-App-master/app/src/main/res/drawable-mdpi/help_lay_style.xml"
+    },
+    {
+        "merged": "/home/megan/AndroidStudioProjects/Framework-App-master/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/about_lay_style.xml",
+        "source": "/home/megan/AndroidStudioProjects/Framework-App-master/app/src/main/res/drawable-mdpi/about_lay_style.xml"
+    },
+    {
+        "merged": "/home/megan/AndroidStudioProjects/Framework-App-master/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/like.png",
+        "source": "/home/megan/AndroidStudioProjects/Framework-App-master/app/src/main/res/drawable-mdpi/like.png"
+    }
+]

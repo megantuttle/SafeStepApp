@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/home/megan/AndroidStudioProjects/Framework-App-master/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/ic_launcher.png",
+        "source": "/home/megan/AndroidStudioProjects/Framework-App-master/app/src/main/res/drawable-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/megan/AndroidStudioProjects/Framework-App-master/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/kapil.jpg",
+        "source": "/home/megan/AndroidStudioProjects/Framework-App-master/app/src/main/res/drawable-xxhdpi/kapil.jpg"
+    },
+    {
+        "merged": "/home/megan/AndroidStudioProjects/Framework-App-master/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/akshay.jpg",
+        "source": "/home/megan/AndroidStudioProjects/Framework-App-master/app/src/main/res/drawable-xxhdpi/akshay.jpg"
+    },
+    {
+        "merged": "/home/megan/AndroidStudioProjects/Framework-App-master/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/like.png",
+        "source": "/home/megan/AndroidStudioProjects/Framework-App-master/app/src/main/res/drawable-xxhdpi/like.png"
+    }
+]

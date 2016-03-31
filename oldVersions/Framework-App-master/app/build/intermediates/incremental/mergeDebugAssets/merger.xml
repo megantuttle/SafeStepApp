@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="/home/megan/AndroidStudioProjects/Framework-App-master/app/src/main/assets"><file name="mydb" path="/home/megan/AndroidStudioProjects/Framework-App-master/app/src/main/assets/mydb"/></source></dataSet><dataSet config="debug"><source path="/home/megan/AndroidStudioProjects/Framework-App-master/app/src/debug/assets"/></dataSet></merger>
