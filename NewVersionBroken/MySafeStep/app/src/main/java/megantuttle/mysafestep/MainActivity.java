@@ -1,6 +1,7 @@
 package megantuttle.mysafestep;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -11,9 +12,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
+import megantuttle.mysafestep.charting.utils.Utils;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -33,6 +39,22 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        // initialize the utilities
+        Utils.init(this);
+
+        ArrayList<ContentItem> objects = new ArrayList<ContentItem>();
+
+        objects.add(new ContentItem("Line Chart", "A simple demonstration of the linechart."));
+        objects.add(new ContentItem("Line Chart (Dual YAxis)",
+                "Demonstration of the linechart with dual y-axis."));
+        objects.add(new ContentItem("Bar Chart", "A simple demonstration of the bar chart."));
+
+        MyAdapter adapter = new MyAdapter(this, objects);
+
+        ListView lv = (ListView) findViewById(R.id.listView1);
+        lv.setAdapter(adapter);
+
     }
 
     @Override

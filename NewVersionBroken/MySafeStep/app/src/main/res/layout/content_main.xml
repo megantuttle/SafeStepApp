@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:hint="@string/edit_message"
         android:layout_weight="1" />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -24,6 +25,14 @@
         android:layout_height="wrap_content"
         android:text="@string/gait_tracker"
         android:onClick="gaitTracker" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitStart"
+        android:src="@drawable/ic_brace"
+        tools:ignore="ContentDescription"/>
 
 
 </LinearLayout>
