@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/megan/Desktop/MySafeStep/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/ic_launcher.png",
+        "source": "/home/megan/Desktop/MySafeStep/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/megan/Desktop/SafeStepApp/MySafeStep/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/ic_launcher.png",
+        "source": "/home/megan/Desktop/SafeStepApp/MySafeStep/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    }
+]

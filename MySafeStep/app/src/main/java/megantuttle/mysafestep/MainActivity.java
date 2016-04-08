@@ -1,6 +1,10 @@
 package megantuttle.mysafestep;
 
+import android.bluetooth.BluetoothAdapter;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -9,16 +13,19 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.bluetooth.*;
 import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import java.util.Set;
 
 
 public class MainActivity extends AppCompatActivity {
 
-    @Override
+
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -33,6 +40,52 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        // setting up bluetooth
+        BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+        if (mBluetoothAdapter == null) {
+            //Device does not support bluetooth
+        }
+        if (!mBluetoothAdapter.isEnabled()) {
+            Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+            startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
+        }
+
+        //query paired devices
+        Set<BluetoothDevice> pairedDevices = mBluetoothAdapter.getBondedDevices();
+        // if there are paired devices
+        if (pairedDevices.size() > 0) {
+            // loop through paired devices
+            for (BluetoothDevice device : pairedDevices) {
+                // add the name and address to an array adapter to show in a ListView
+                mArrayAdapter.add(device.getName() + "\n" + device.getAddress());
+            }
+        }
+
+
+        // discovering devices
+        //Create a Broadcast Receiver for ACTION_FOUND
+        private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                String action = intent.getAction();
+                // when discovery finds a device
+                if (BluetoothDevice.ACTION_FOUND.equals(action)) {
+                    // get the bluetoothdevice object from the intent
+                    BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
+                    // add the name and address to an array adapter to show in a listview
+                    mArrayAdapter.add(device.getName() + "\n" + device.getAddress());
+                }
+            }
+        };
+        // register the broadcast receiver
+        IntentFilter filter = new IntentFilter(BluetoothDevice.ACTION_FOUND);
+        registerReceiver(mReceiver, filter); // Don't forget to unregister during onDestroy
+
+        // enable discoverability
+        Intent discoverableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
+        discoverableIntent.putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, 300);
+        startActivity(discoverableIntent);
     }
 
     @Override
@@ -61,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
 
     //Defining stuff
     public final static String EXTRA_MESSAGE = "megantuttle.mysafestep.MESSAGE";
-
+/**
     //Called when the user clicks the Send button, the other activity pops up on screen
     public void sendMessage(View view){
         Intent intent = new Intent(this, DisplayMessageActivity.class);
@@ -70,11 +123,25 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
     }
-
+*/
     //Make a new activity to be called when a user clicks the Gait Tracker button
     public void gaitTracker(View view){
         Intent intent = new Intent(this, GaitTrackerActivity.class);
         startActivity(intent);
     }
+
+    /**
+     Here is the xml file for the message thingy
+     <EditText android:id="@+id/edit_message"
+     android:layout_width="0dp"
+     android:layout_height="wrap_content"
+     android:hint="@string/edit_message"
+     android:layout_weight="1" />
+     <Button
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:text="@string/button_send"
+     android:onClick="sendMessage" />
+     */
 
 }
