@@ -7,4 +7,5 @@
     <string name="title_activity_display_message">MyMessage</string>
     <string name="title_activity_gait_tracker">GaitTrackerActivity</string>
     <string name="gait_tracker">Gait Tracker: Progress</string>
+    <string name="background_image">background image hopefully</string>
 </resources>
