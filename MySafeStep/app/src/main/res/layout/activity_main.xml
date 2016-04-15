@@ -34,7 +34,7 @@
 
                 <ImageView
                     android:id="@+id/main.imageview.placeholder"
-                    android:src="@drawable/ic_ss_icon"
+                    android:src="@drawable/chart"
                     android:layout_width="match_parent"
                     android:layout_height="300dp"
                     android:fitsSystemWindows="true"
@@ -94,7 +94,7 @@
                 app:contentPadding="16dp"
                 >
 
-                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                     xmlns:app="http://schemas.android.com/apk/res-auto"
                     xmlns:tools="http://schemas.android.com/tools"
                     android:orientation="horizontal"
@@ -104,13 +104,27 @@
                     tools:showIn="@layout/activity_main">
 
                     <Button
-                        android:layout_width="wrap_content"
+                        android:id="@+id/gait_button"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/gait_tracker"
                         android:onClick="gaitTracker" />
 
+                    <Button
+                        android:id="@+id/act_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/gait_button"
+                        android:text="@string/act_history"/>
 
-                </LinearLayout>
+                    <Button
+                        android:id="@+id/steps_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/act_button"
+                        android:text="@string/step_data"/>
+
+                </RelativeLayout>
             </android.support.v7.widget.CardView>
 
 
@@ -154,7 +168,7 @@
         <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="@dimen/image_width"
             android:layout_height="@dimen/image_width"
-            android:src="@drawable/ic_ss_icon"
+            android:src="@drawable/logo"
             android:layout_gravity="center_horizontal"
             app:civ_border_color="@android:color/white"
             app:civ_border_width="2dp"

@@ -71,17 +71,6 @@ public class MainActivity extends AppCompatActivity
         mAppBarLayout   = (AppBarLayout) findViewById(R.id.main_appbar);
     }
 
-        /*
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-        **/
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

@@ -6,6 +6,7 @@
     <string name="step_data">Steps</string>
     <string name="title_activity_display_message">MyMessage</string>
     <string name="title_activity_gait_tracker">GaitTrackerActivity</string>
-    <string name="gait_tracker">Gait Tracker: Progress</string>
+    <string name="gait_tracker">Gait Tracker</string>
     <string name="background_image">background image hopefully</string>
+    <string name="act_history">Activation History</string>
 </resources>
