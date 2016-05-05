@@ -34,7 +34,7 @@
 
                 <ImageView
                     android:id="@+id/main.imageview.placeholder"
-                    android:src="@drawable/chart"
+                    android:src="@drawable/runner"
                     android:layout_width="match_parent"
                     android:layout_height="300dp"
                     android:fitsSystemWindows="true"
