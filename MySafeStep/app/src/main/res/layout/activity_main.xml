@@ -123,6 +123,16 @@
                         android:drawableLeft="@drawable/steps_icon"
                         style="?android:attr/borderlessButtonStyle"/>
 
+                    <Button
+                        android:id="@+id/dropfoot_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/steps_button"
+                        android:text="@string/gait_trends"
+                        android:drawableLeft="@drawable/analysis"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:onClick="dropImage"/>
+
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 

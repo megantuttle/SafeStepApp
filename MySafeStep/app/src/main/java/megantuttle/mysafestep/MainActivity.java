@@ -26,6 +26,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import junit.framework.Test;
 
 
 public class MainActivity extends AppCompatActivity
@@ -160,4 +161,8 @@ public class MainActivity extends AppCompatActivity
         startActivity(intent);
     }
 
+    public void dropImage(View view){
+        Intent intent = new Intent(this, dropImage.class);
+        startActivity(intent);
+    }
 }

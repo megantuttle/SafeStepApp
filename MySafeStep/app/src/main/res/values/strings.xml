@@ -9,4 +9,5 @@
     <string name="gait_tracker">Gait Tracker</string>
     <string name="background_image">background image hopefully</string>
     <string name="act_history">Activation History</string>
+    <string name="gait_trends">Gait Trends</string>
 </resources>
