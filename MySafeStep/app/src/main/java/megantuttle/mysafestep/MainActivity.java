@@ -1,5 +1,6 @@
 package megantuttle.mysafestep;
 
+import android.app.ActionBar;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
@@ -15,6 +16,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.Window;
+import android.view.WindowManager;
 import android.view.animation.AlphaAnimation;
 import android.widget.AdapterView;
 import android.widget.EditText;
@@ -62,6 +65,7 @@ public class MainActivity extends AppCompatActivity
 
         mToolbar.inflateMenu(R.menu.menu_main);
         startAlphaAnimation(mTitle, 0, View.INVISIBLE);
+
     }
 
     private void bindActivity() {
@@ -101,6 +105,8 @@ public class MainActivity extends AppCompatActivity
 
         handleAlphaOnTitle(percentage);
         handleToolbarTitleVisibility(percentage);
+
+
     }
 
     private void handleToolbarTitleVisibility(float percentage) {
@@ -144,6 +150,7 @@ public class MainActivity extends AppCompatActivity
         alphaAnimation.setDuration(duration);
         alphaAnimation.setFillAfter(true);
         v.startAnimation(alphaAnimation);
+
     }
 
 

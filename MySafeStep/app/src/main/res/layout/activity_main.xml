@@ -21,7 +21,7 @@
         <android.support.design.widget.AppBarLayout
             android:id="@+id/main.appbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="210dp"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             android:fitsSystemWindows="true">
 
@@ -30,19 +30,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+                app:contentScrim="?attr/colorPrimary"
+                app:expandedTitleMarginStart="48dp"
+                app:expandedTitleMarginEnd="64dp"
                 >
 
-                <ImageView
-                    android:id="@+id/main.imageview.placeholder"
-                    android:src="@drawable/runner"
-                    android:layout_width="match_parent"
-                    android:layout_height="300dp"
-                    android:fitsSystemWindows="true"
-                    android:scaleType="centerCrop"
-                    android:tint="#11000000"
-                    app:layout_collapseMode="parallax"
-                    app:layout_collapseParallaxMultiplier="0.9"
-                    android:contentDescription="@string/background_image"/>
+
 
                 <FrameLayout
                     android:id="@+id/main.framelayout.title"
@@ -108,21 +101,27 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/gait_tracker"
-                        android:onClick="gaitTracker" />
+                        android:onClick="gaitTracker"
+                        android:drawableLeft="@drawable/graph_icon"
+                        style="?android:attr/borderlessButtonStyle"/>
 
                     <Button
                         android:id="@+id/act_button"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/gait_button"
-                        android:text="@string/act_history"/>
+                        android:text="@string/act_history"
+                        android:drawableLeft="@drawable/history"
+                        style="?android:attr/borderlessButtonStyle"/>
 
                     <Button
                         android:id="@+id/steps_button"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/act_button"
-                        android:text="@string/step_data"/>
+                        android:text="@string/step_data"
+                        android:drawableLeft="@drawable/steps_icon"
+                        style="?android:attr/borderlessButtonStyle"/>
 
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
@@ -138,6 +137,7 @@
             app:layout_anchor="@id/main.framelayout.title"
             app:theme="@style/ThemeOverlay.AppCompat.Dark"
             app:title=""
+            app:layout_collapseMode="pin"
             >
 
             <LinearLayout
